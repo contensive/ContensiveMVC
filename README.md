@@ -13,13 +13,14 @@ This is a simple example of a .Net MVC Framework integration of Contensive. MVC 
   
   cd \program files (x86)\kma\Contensive5
   
-  cc --configure
+  Setup the server-wide configuration settings like Db connection string. For more details see the article at http://contensive.io/how-to-configure-the-new-server-and-add-a-web-application
   
-    ( enter remote resources as needed )
-    
-  cc -n MVCDemo
+    cc --configure
+      
+  Creates a default site named MVCDemo.
+
+    cc -n MVCDemo
   
-    ( creates a default site named MVCDemo. Leave the name off the command to manually configure folders, etc)
    
 ### Create this Project From Scratch (skip if you are just using this project)
 
