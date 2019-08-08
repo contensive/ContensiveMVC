@@ -5,6 +5,9 @@ This is a simple example of a .Net MVC Framework integration of Contensive. MVC 
 
 ## Instructions
 
+### Download and install Dotnet Framework 4.7.2 or Beyond
+  Currently https://dotnet.microsoft.com/download/dotnet-framework
+
 ### Download and install the Contensive CLI (Windows only)
   Go to http://contensive.io/downloads and download then run the CLI installation
 
