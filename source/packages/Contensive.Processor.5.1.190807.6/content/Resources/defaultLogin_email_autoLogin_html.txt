@@ -1,0 +1,13 @@
+﻿<div class="container-fluid">
+    <h4 class="form-signin-heading">Login</h4>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Username or Email" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox pt-2">
+        <label>
+        <input type="checkbox" value="remember-me">&nbsp;Remember me
+        </label>
+    </div>
+    <button class="btn btn-success btn-block pt-2" type="submit">Login</button>
+</div>

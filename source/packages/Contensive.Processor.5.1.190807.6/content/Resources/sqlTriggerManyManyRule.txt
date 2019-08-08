@@ -1,0 +1,22 @@
+﻿IF EXISTS (SELECT * FROM sys.objects WHERE [name] = N'ccManyManyRuleDelete_{ruleTable}_{ruleField}' AND [type] = 'TR')
+BEGIN
+      DROP TRIGGER [dbo].[ccManyManyRuleDelete_{ruleTable}_{ruleField}];
+END
+GO
+DROP TRIGGER IF EXISTS ccManyManyRuleDelete_{ruleTable}_{ruleField}
+CREATE TRIGGER ccManyManyRuleDelete_{ruleTable}_{ruleField}
+ON {joinTable}
+AFTER UPDATE,DELETE
+AS
+delete from {ruleTable} 
+from {ruleTable} r 
+left join {joinTable} a on a.{joinField}=r.{ruleField} where a.id is null
+
+--sample
+--CREATE TRIGGER ccManyManyRuleDelete_ccAddonContentFieldTypeRules_addonId
+--ON ccAggregateFunctions
+--AFTER  UPDATE,DELETE
+--AS
+--delete  from ccAddonContentFieldTypeRules 
+--from ccAddonContentFieldTypeRules r 
+--left join ccAggregateFunctions a on a.id=r.addonid where a.id is null

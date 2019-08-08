@@ -1,0 +1,103 @@
+
+    <div class="ccCon" style="width:400px;margin:100px auto 0 auto;">
+        <div class="ccHeaderCon">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td width="50%" valign="middle" class="cchLeft">Login</td>
+
+                    <td width="50%" valign="middle" class="cchRight">{{rightNow}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="400" class="ccPanel">
+            <tr>
+                <td colspan="3" class="ccPanelHilite"><img alt="space" src="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/images/spacer.gif" height="1" width="400"></td>
+            </tr>
+
+            <tr>
+                <td width="1" height="1" class="ccPanelHilite"><img alt="space" src="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/images/spacer.gif" height="1" width="1"></td>
+
+                <td width="398" valign="top" align="left" class="ccPanel">
+                    <table style="width:398px;border:0px;" class="ccPanel" cellspacing="0">
+                        <tr>
+                            <td style="padding:15px;vertical-align:top" class="ccPanel">
+                                <p class="ccAdminNormal">You are attempting to enter an access controlled area. Continue only if you have authority to enter this area. Information about your visit
+                                will be recorded for security purposes.</p>
+
+                                <div class="ccLoginFormCon">
+                                    <p class="ccAdminNormal"><b>To login, enter your username and password.</b></p>
+
+                                    <form name="" id="" action="http://app20171127012754/admin" method="post" style="display: inline;">
+                                        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td style="text-align:right;vertical-align:middle;width:30%;padding:4px" align="right" width="30%"><span class="ccAdminNormal">Username </span></td>
+
+                                                <td style="text-align:left;vertical-align:middle;width:70%;padding:4px" align="left" width="70%"><input id="LoginUsernameInput" name="username" value=
+                                                "" size="20" maxlength="50"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align:right;vertical-align:middle;width:30%;padding:4px" align="right"><span class="ccAdminNormal">Password </span></td>
+
+                                                <td style="text-align:left;vertical-align:middle;width:70%;padding:4px" align="left"><input name="password" value="" size="20" maxlength="50" type=
+                                                "password"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                        </table><input type="hidden" name="Type" value="login"> <input type="hidden" name="email">
+
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td align="left" class="ccButtonCon"><input type="submit" name="Button" value=" Login " onclick="" id=""></td>
+                                            </tr>
+                                        </table>
+                                    </form>
+
+                                    <p class="ccAdminNormal"><b>Forget your password?</b></p>
+
+                                    <p class="ccAdminNormal">If you are a member of the system and can not remember your password, enter your email address below and we will email your matching
+                                    username and password.</p>
+
+                                    <form name="" id="" action="{{adminUrl}}" method="post" style="display: inline;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td style="text-align:right;vertical-align:middle;width:30%;padding:4px" align="right" width="30%"><span class="ccAdminNormal">Email</span></td>
+
+                                                <td style="text-align:left;vertical-align:middle;width:70%;padding:4px" align="left" width="70%"><input name="email" value="" size="20" maxlength="50"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td align="left" class="ccButtonCon"><input type="submit" name="Button" value=" Send Password " onclick="" id=""></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table><input type="hidden" name="Type" value="lk0q56am09">
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td width="1" class="ccPanelShadow"><img alt="space" src="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/images/spacer.gif" height="1" width="1"></td>
+            </tr>
+
+            <tr>
+                <td colspan="3" class="ccPanelShadow"><img alt="space" src="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/images/spacer.gif" height="1" width="400"></td>
+            </tr>
+        </table>
+	</div>
+<script>
+(function(){document.getElementById('LoginUsernameInput').focus()})()
+</script>

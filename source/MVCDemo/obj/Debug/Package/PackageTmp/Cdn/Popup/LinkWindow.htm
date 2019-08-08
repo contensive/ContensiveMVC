@@ -1,0 +1,88 @@
+
+<html>
+
+<head>
+<title>Active Content Properties</title>
+<link rel="stylesheet" href="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/Config/styles.css" type="text/css">
+<SCRIPT language="javascript" type="text/javascript">
+var RawString;
+
+function LoadForm() {
+    var callerWindowObj = dialogArguments;
+    RawString = new String( callerWindowObj.ACPropertyObject.id );
+    }
+function SaveForm() {
+    var callerWindowObj = dialogArguments;
+    var NVPointer;
+    QueryString='';
+    NVPointer=0;
+    RawString='';
+    while (document.all['NV'+NVPointer ]) {
+        if (RawString != ''){ RawString += ',' }
+        RawString += document.all['NV'+NVPointer ].value
+        NVPointer++;
+        }
+    callerWindowObj.ACPropertyObject.id = RawString;
+    }
+LoadForm(); 
+</SCRIPT>
+</head>
+
+<body class="ccPanel"  topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%" class="ccPanel"
+><TR
+><TD colspan="3" class="ccPanelhilite"><IMG alt="" src="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/Images/spacer.gif" height="1" width="100%" /></TD
+></TR><TR
+><TD width="1" height="1" class="ccPanelhilite"><IMG alt="" src="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/Images/spacer.gif" height="1" width="1" /></TD
+><TD width="100%" valign="top" align="left"
+><TABLE border="0" cellpadding="5" cellspacing="0" width="100%" class="ccPanel"
+><TR
+><TD valign="top"
+><TABLE border="0" cellpadding="2" cellspacing="1" width="100%" class="ccPanel"
+><tr
+><td width="5"><img src="../Images/spacer.gif" width="100%" height="1"></td
+><td width="20%"><img src="../Images/spacer.gif" width="100%" height="1"></td
+><td width="80%"><img src="../Images/spacer.gif" width="100%" height="1"></td
+></tr>
+<tr><td COLSPAN="3"><b>Active Content Properties</b><BR><BR></td></tr>
+<Script language="javascript">
+var Pointer;
+var Spacer;
+var SplitString;
+var Value;
+
+SplitString = RawString.split(",")
+Spacer='<td width="5"><img src="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/Images/Spacer.gif" width="1" height="20"></td>'
+
+Value=''
+if ( SplitString[0] ){
+    Value = SplitString[0]
+    }
+document.write( '<tr>'+Spacer+'<td class="ccPanelNormal" align="right">Type</td><td align="left" class="ccPanelInput">' );
+document.write( '<INPUT Type="Text" ID="NV0" Value="'+Value+'" Size="20">' );
+
+Value=''
+if ( SplitString[1] ){
+    Value = SplitString[1]
+    }
+document.write( '<tr>'+Spacer+'<td class="ccPanelNormal" align="right">Sub-Type</td><td align="left" class="ccPanelInput">' );
+document.write( '<INPUT Type="Text" ID="NV1" Value="'+Value+'" Size="20">' );
+
+Value=''
+if ( SplitString[2] ){
+    Value = SplitString[2]
+    }
+document.write( '<tr>'+Spacer+'<td class="ccPanelNormal" align="right">Argument</td><td align="left" class="ccPanelInput">' );
+document.write( '<INPUT Type="Text" ID="NV2" Value="'+Value+'" Size="20">' );
+
+</Script>
+</TABLE>
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%" class="ccPanelButtons">
+<TR><TD colspan="3" class="ccPanelShadow"><IMG alt=" src="../Images/spacer.gif" height="1" width="100%" /></TD></TR><TR><TD width="1" height="1" class="ccPanelShadow"><IMG alt=" src="../Images/spacer.gif" height="1" width="1" /></TD><TD width="100%" valign="top" align="left"><TABLE border="0" cellpadding="3" cellspacing="0" width="100%" class="ccPanelButtons"><TR>
+<TD valign="top">
+<INPUT Type="Button" Value="  OK  " onClick="SaveForm(); window.close();">
+<INPUT Type="Button" Value="  Apply  " onClick="SaveForm();">
+<INPUT Type="Button" Value="  Cancel  " onClick="window.close();">
+</TD></TR></TABLE></TD><TD width="1" class="ccPanelHilite"><IMG alt=" src="../Images/spacer.gif" height="1" width="1" /></TD></TR><TR><TD colspan="3" class="ccPanelHilite"><IMG alt=" src="../Images/spacer.gif" height="1" width="100%" /></TD></TR></TABLE></TD></TR></TABLE>
+</body>
+

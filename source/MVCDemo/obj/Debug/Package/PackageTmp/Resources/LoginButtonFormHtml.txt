@@ -1,0 +1,3 @@
+﻿<form class="form-inline" method="post" action="?method=login">
+<button class="btn btn-warning btn-sm ml-2" type="submit">Login</button>
+</form>

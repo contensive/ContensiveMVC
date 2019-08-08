@@ -1,0 +1,90 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<script type="text/javascript" language="javascript">
+//
+var callerWindowObj;
+var RawString;
+var SplitString;
+var QueryString;
+//
+function LoadForm() {
+    var src,obj;
+    callerWindowObj = dialogArguments;
+    RawString = new String( callerWindowObj.globalAddonIconObj.id );
+    SplitString = RawString.split(",")
+    QueryString = SplitString[4]
+    src = new String( callerWindowObj.AFinnerHTML );
+    obj = document.getElementById("content");
+    obj.innerHTML=src;
+    document.title=SplitString[3]+' Properties';
+
+}
+//
+function SaveForm() {
+    var NVPointer,NVName,NVValue;
+    QueryString='';
+    NVPointer=0;
+    QueryString='';
+    while (document.all['NV'+NVPointer ]) {
+        if (QueryString != ''){ QueryString += '&' }
+	switch ( document.all['NVType'+NVPointer ].value) {
+		case 'checkbox':
+			NVName=callerWindowObj.EncodeAddonOptionArgument( document.all['NVType'+NVPointer ].name );
+			NVValue='';
+			var c=document.getElementsByName(NVName);
+			if (c) {
+				for (var i=0; i<c.length; i++) {
+					if ( c[i].checked ) {
+						if ( NVValue!='') NVValue+=','
+						NVValue+=callerWindowObj.EncodeAddonOptionArgument( c[i].value );
+					}
+				}
+			}
+			break;
+		case 'radio':
+			NVName = callerWindowObj.EncodeAddonOptionArgument( document.all['NVType'+NVPointer ].name );
+			NVValue='';
+			var c=document.getElementsByName(NVName);
+			if (c) {
+				for (var i=0; i<c.length; i++) {
+					if ( c[i].checked ) {
+						if ( NVValue!='') NVValue+=','
+						NVValue+=c[i].value
+					}
+				}
+			}
+			break;
+		default:
+			NVName = callerWindowObj.EncodeAddonOptionArgument( document.all['NV'+NVPointer ].name );
+			NVValue = callerWindowObj.EncodeAddonOptionArgument( document.all['NV'+NVPointer ].value);
+			break;
+	}
+        QueryString += NVName+'='+NVValue;
+	if (document.all['NVO'+NVPointer]) {
+		// add still-encoded options back in
+		QueryString+=document.all['NVO'+NVPointer].value;
+	}
+        NVPointer++;
+    }
+    RawString = callerWindowObj.EncodeAddonOptionArgument( SplitString[0] );
+    RawString += ','+callerWindowObj.EncodeAddonOptionArgument( SplitString[1] );
+    RawString += ','+callerWindowObj.EncodeAddonOptionArgument( SplitString[2] );
+    RawString += ','+callerWindowObj.EncodeAddonOptionArgument( SplitString[3] );
+    RawString += ','+QueryString;
+    callerWindowObj.globalAddonIconObj.id = RawString;
+}
+//
+function escapeHTML(str)
+{
+   var div = document.createElement('div');
+   var text = document.createTextNode(str);
+   div.appendChild(text);
+   return div.innerHTML;
+}; 
+//
+</script>
+<title>Properties</title>
+<link rel="stylesheet" href="https://s3.amazonaws.com/cdn.contensive.com/assets/20190729/styles/ccDefault.css" type="text/css"/>
+</head>
+<body class="ccBodyAdmin ccCon" onload="LoadForm();" id="content"></body></html>
+
