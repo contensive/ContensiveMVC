@@ -11,6 +11,8 @@ namespace MVCDemo {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             //
             // -- add dynamic routes from Contensive add-ons and link-alias
+            // -- these routes have no wildcards so add them first, before other routes
+            //  -- 
             // -- the Contensive app can have any name, but the sitename included here as an option
             using (var cp = new  Contensive.Processor.CPClass(System.Web.Hosting.HostingEnvironment.SiteName)) {
                 foreach (var kvp in cp.routeMap.routeDictionary) {
