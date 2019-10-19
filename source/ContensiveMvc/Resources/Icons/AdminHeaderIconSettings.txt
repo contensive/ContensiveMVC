@@ -1,0 +1,6 @@
+﻿<div style="width: 40px;height: 40px;margin: 0 0 0 5px;display: block;border: 1px solid #ccc;background: transparent;"><div class="navbar-text" style="width:100%;padding: 0;color:#2196F3;text-align: center;vertical-align: middle;line-height: 38px;background-color: chartreuse;font-size: 20px;"><a href="/admin?addonguid=%7BA1BCA00C-2657-42A1-8F98-BED1E5A42025%7D&amp;setPortalGuid=%7B9DF996D7-2280-431E-8D34-2ED059CB988C%7D">
+<i title="Add-on Manager" class="fas fa-tools" style="
+    width: 80%;
+    /* color: crimson; */
+    background-color: chartreuse;
+    "></i></a></div></div>

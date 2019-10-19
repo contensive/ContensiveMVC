@@ -1,0 +1,10 @@
+﻿<configuration>
+  <system.web>
+    <compilation>
+      <assemblies>
+        <remove assembly="ClearScriptV8-64" />
+        <remove assembly="ClearScriptV8-32" />
+      </assemblies>
+    </compilation>
+  </system.web>
+</configuration>

@@ -1,0 +1,17 @@
+﻿<div class="container-fluid">
+    <h4 class="form-signin-heading">Login</h4>
+	<div class="pt-2">
+		<label for="inputUsername" class="sr-only">Email address</label>
+		<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+	</div>
+	<div class="pt-2">
+	    <label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+	</div>
+    <div class="checkbox pt-2">
+        <label><input type="checkbox" value="remember-me">&nbsp;Remember me</label>
+    </div>
+	<div class="pt-2">
+	    <button class="btn btn-success btn-block" type="submit">Login</button>
+    </div>
+</div>
